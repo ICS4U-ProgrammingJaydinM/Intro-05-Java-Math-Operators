@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
 
-public class MathOperators {
+public final class MathOperators {
 
   public static void main(String[] args) {
 
