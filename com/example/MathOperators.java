@@ -37,27 +37,21 @@ public final class MathOperators {
     System.out.println("\nAddition:");
     System.out.printf(
         "%." + numDecimals + "f + %." + numDecimals +
-         "f = %." + numDecimals + "f%n",
-        num1,
-        num2,
+         "f = %." + numDecimals + "f%n", num1, num2,
         bdNum1.add(bdNum2).doubleValue());
 
     // Subtraction
     System.out.println("\nSubtraction:");
     System.out.printf(
         "%." + numDecimals + "f - %." + numDecimals
-         + "f = %." + numDecimals + "f%n",
-        num1,
-        num2,
+        + "f = %." + numDecimals + "f%n", num1, num2,
         bdNum1.subtract(bdNum2).doubleValue());
 
     // Multiplication
     System.out.println("\nMultiplication:");
     System.out.printf(
         "%." + numDecimals + "f * %." + numDecimals
-         + "f = %." + numDecimals + "f%n",
-        num1,
-        num2,
+        + "f = %." + numDecimals + "f%n", num1, num2,
         bdNum1.multiply(bdNum2).doubleValue());
 
     // Division
@@ -65,9 +59,7 @@ public final class MathOperators {
     if (bdNum2.compareTo(BigDecimal.ZERO) != 0) {
       System.out.printf(
           "%." + numDecimals + "f / %." + numDecimals
-           + "f = %." + numDecimals + "f%n",
-          num1,
-          num2,
+          + "f = %." + numDecimals + "f%n", num1, num2,
           bdNum1.divide(bdNum2, RoundingMode.HALF_UP).doubleValue());
     } else {
       System.out.println("Cannot divide by zero.");
@@ -79,11 +71,14 @@ public final class MathOperators {
         "%." + numDecimals + "f ^ 2 = %." + numDecimals
          + "f%n" , num1, Math.pow(bdNum1.doubleValue(), 2));
     System.out.printf(
-        "%." + numDecimals + "f^ 3 = %." + numDecimals + "f%n", num1, Math.pow(bdNum1.doubleValue(), 3));
+        "%." + numDecimals + "f^ 3 = %." + numDecimals +
+        "f%n", num1, Math.pow(bdNum1.doubleValue(), 3));
 
     // Square root
     System.out.println("\nSquare root:");
-    System.out.printf("sqrt(%.2f) = %."  + numDecimals + "f%n", num1, Math.sqrt(bdNum1.doubleValue()));
-    System.out.printf("sqrt(%.2f) = %."  + numDecimals + "f%n", num2, Math.sqrt(bdNum2.doubleValue()));
+    System.out.printf("sqrt(%.2f) = %." + numDecimals +
+    "f%n", num1, Math.sqrt(bdNum1.doubleValue()));
+    System.out.printf("sqrt(%.2f) = %." + numDecimals +
+    "f%n", num2, Math.sqrt(bdNum2.doubleValue()));
   }
 }
