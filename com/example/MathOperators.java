@@ -1,5 +1,7 @@
+
 /**
- * The MathOperators program can do addition, subtraction, multiplication, division, exponents and
+ * The MathOperators program can do addition,
+ * subtraction, multiplication, division, exponents and
  * square root.
  *
  * @author Jaydin Madore
