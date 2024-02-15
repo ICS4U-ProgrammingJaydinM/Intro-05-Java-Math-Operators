@@ -25,15 +25,19 @@ public final class MathOperators {
     double num1 = input.nextDouble();
     double num2 = input.nextDouble();
 
-    // Create BigDecimal objects to represent the input numbers with the desired number of decimal
-    // places
-    BigDecimal bdNum1 = new BigDecimal(num1).setScale(numDecimals, RoundingMode.HALF_UP);
-    BigDecimal bdNum2 = new BigDecimal(num2).setScale(numDecimals, RoundingMode.HALF_UP);
+    // Create BigDecimal objects to represent the input
+    // numbers with the desired number of decimal
+    // places.
+    BigDecimal bdNum1 = new BigDecimal(num1).
+    setScale(numDecimals, RoundingMode.HALF_UP);
+    BigDecimal bdNum2 = new BigDecimal(num2).
+    setScale(numDecimals, RoundingMode.HALF_UP);
 
     // Addition
     System.out.println("\nAddition:");
     System.out.printf(
-        "%." + numDecimals + "f + %." + numDecimals + "f = %." + numDecimals + "f%n",
+        "%." + numDecimals + "f + %." + numDecimals +
+         "f = %." + numDecimals + "f%n",
         num1,
         num2,
         bdNum1.add(bdNum2).doubleValue());
@@ -41,7 +45,8 @@ public final class MathOperators {
     // Subtraction
     System.out.println("\nSubtraction:");
     System.out.printf(
-        "%." + numDecimals + "f - %." + numDecimals + "f = %." + numDecimals + "f%n",
+        "%." + numDecimals + "f - %." + numDecimals
+         + "f = %." + numDecimals + "f%n",
         num1,
         num2,
         bdNum1.subtract(bdNum2).doubleValue());
@@ -49,7 +54,8 @@ public final class MathOperators {
     // Multiplication
     System.out.println("\nMultiplication:");
     System.out.printf(
-        "%." + numDecimals + "f * %." + numDecimals + "f = %." + numDecimals + "f%n",
+        "%." + numDecimals + "f * %." + numDecimals
+         + "f = %." + numDecimals + "f%n",
         num1,
         num2,
         bdNum1.multiply(bdNum2).doubleValue());
@@ -58,7 +64,8 @@ public final class MathOperators {
     System.out.println("\nDivision:");
     if (bdNum2.compareTo(BigDecimal.ZERO) != 0) {
       System.out.printf(
-          "%." + numDecimals + "f / %." + numDecimals + "f = %." + numDecimals + "f%n",
+          "%." + numDecimals + "f / %." + numDecimals
+           + "f = %." + numDecimals + "f%n",
           num1,
           num2,
           bdNum1.divide(bdNum2, RoundingMode.HALF_UP).doubleValue());
@@ -69,7 +76,8 @@ public final class MathOperators {
     // Exponents:
     System.out.println("\nExponents:");
     System.out.printf(
-        "%." + numDecimals + "f ^ 2 = %." + numDecimals + "f%n" , num1, Math.pow(bdNum1.doubleValue(), 2));
+        "%." + numDecimals + "f ^ 2 = %." + numDecimals
+         + "f%n" , num1, Math.pow(bdNum1.doubleValue(), 2));
     System.out.printf(
         "%." + numDecimals + "f^ 3 = %." + numDecimals + "f%n", num1, Math.pow(bdNum1.doubleValue(), 3));
 
