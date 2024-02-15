@@ -69,13 +69,13 @@ public final class MathOperators {
     // Exponents:
     System.out.println("\nExponents:");
     System.out.printf(
-        "%." + numDecimals + "f ^ 2 = %.2f%n", num1, Math.pow(bdNum1.doubleValue(), 2));
+        "%." + numDecimals + "f ^ 2 = %." + numDecimals + "f%n" , num1, Math.pow(bdNum1.doubleValue(), 2));
     System.out.printf(
-        "%." + numDecimals + "f^ 3 = %.2f%n", num1, Math.pow(bdNum1.doubleValue(), 3));
+        "%." + numDecimals + "f^ 3 = %." + numDecimals + "f%n", num1, Math.pow(bdNum1.doubleValue(), 3));
 
     // Square root
     System.out.println("\nSquare root:");
-    System.out.printf("sqrt(%.2f) = %.2f%n", num1, Math.sqrt(bdNum1.doubleValue()));
-    System.out.printf("sqrt(%.2f) = %.2f%n", num2, Math.sqrt(bdNum2.doubleValue()));
+    System.out.printf("sqrt(%.2f) = %."  + numDecimals + "f%n", num1, Math.sqrt(bdNum1.doubleValue()));
+    System.out.printf("sqrt(%.2f) = %."  + numDecimals + "f%n", num2, Math.sqrt(bdNum2.doubleValue()));
   }
 }
