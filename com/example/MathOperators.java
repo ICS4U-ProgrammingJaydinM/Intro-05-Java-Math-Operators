@@ -19,11 +19,13 @@ public final class MathOperators {
     Scanner input = new Scanner(System.in);
 
     System.out.print("Enter the number of decimal places: ");
+
+    //Will get the number of decimal places from the user.
     int numDecimals = input.nextInt();
 
     System.out.println("\nEnter two numbers:");
 
-    // Numerical input
+    // Will get 2 number from the user 
     double num1 = input.nextDouble();
     double num2 = input.nextDouble();
 
@@ -35,28 +37,31 @@ public final class MathOperators {
     BigDecimal bdNum2 = new BigDecimal(num2).
     setScale(numDecimals, RoundingMode.HALF_UP);
 
-    // Addition
+    //Does addition and prints the results.
     System.out.println("\nAddition:");
     System.out.printf(
+        // The number following the %. specifies the number of decimal places that should be displayed to the user.
+        // The f character indicates that a floating-point number should be inserted at this position.
+        // The %n at the end of the format string is a line separator that moves the cursor to the next line.
         "%." + numDecimals + "f + %." + numDecimals +
          "f = %." + numDecimals + "f%n", num1, num2,
         bdNum1.add(bdNum2).doubleValue());
 
-    // Subtraction
+    //Does subtraction and prints the results.
     System.out.println("\nSubtraction:");
     System.out.printf(
         "%." + numDecimals + "f - %." + numDecimals
         + "f = %." + numDecimals + "f%n", num1, num2,
         bdNum1.subtract(bdNum2).doubleValue());
 
-    // Multiplication
+    //Does multiplication and prints the results.
     System.out.println("\nMultiplication:");
     System.out.printf(
         "%." + numDecimals + "f * %." + numDecimals
         + "f = %." + numDecimals + "f%n", num1, num2,
         bdNum1.multiply(bdNum2).doubleValue());
 
-    // Division
+    //Does division and prints the results
     System.out.println("\nDivision:");
     if (bdNum2.compareTo(BigDecimal.ZERO) != 0) {
       System.out.printf(
@@ -67,7 +72,7 @@ public final class MathOperators {
       System.out.println("Cannot divide by zero.");
     }
 
-    // Exponents:
+    //Does exponentsand prints the results.
     System.out.println("\nExponents:");
     System.out.printf(
         "%." + numDecimals + "f ^ 2 = %." + numDecimals
@@ -76,7 +81,7 @@ public final class MathOperators {
         "%." + numDecimals + "f^ 3 = %." + numDecimals +
         "f%n", num1, Math.pow(bdNum1.doubleValue(), 3));
 
-    // Square root
+    //Does square root and prints the results.
     System.out.println("\nSquare root:");
     System.out.printf("sqrt(%.2f) = %." + numDecimals +
     "f%n", num1, Math.sqrt(bdNum1.doubleValue()));
